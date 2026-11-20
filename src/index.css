@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-green-50 text-stone-800 font-sans antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb { @apply bg-green-300 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-green-400; }
