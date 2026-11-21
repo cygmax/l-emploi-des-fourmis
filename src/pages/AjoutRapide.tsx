@@ -116,13 +116,13 @@ const AjoutRapide: React.FC = () => {
               value={url}
               onChange={e => setUrl(e.target.value)}
               placeholder="https://www.linkedin.com/jobs/..."
-              className="flex-1 px-4 py-2.5 text-sm border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white"
+              className="min-w-0 flex-1 px-4 py-2.5 text-sm border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white"
               onKeyDown={e => e.key === 'Enter' && handleScrape()}
             />
             <button
               onClick={handleScrape}
               disabled={scraping}
-              className="bg-green-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors disabled:opacity-50 flex items-center gap-2"
+              className="shrink-0 bg-green-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors disabled:opacity-50 flex items-center gap-2"
             >
               {scraping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />}
               {scraping ? 'Recherche…' : 'Préremplir'}

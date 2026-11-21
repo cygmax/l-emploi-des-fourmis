@@ -4,6 +4,13 @@ body {
   @apply bg-green-50 text-stone-800 font-sans antialiased;
 }
 
+/* iOS Safari zooms the viewport when focusing a field rendered below 16px;
+   the app styles fields with 14px (text-sm), so bump them up on touch devices
+   only. !important is required to override Tailwind utility classes. */
+@media (pointer: coarse) {
+  input, textarea, select { font-size: 16px !important; }
+}
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { @apply bg-transparent; }
 ::-webkit-scrollbar-thumb { @apply bg-green-300 rounded-full; }
