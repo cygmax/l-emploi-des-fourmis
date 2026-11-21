@@ -176,28 +176,28 @@ const CandidatureDetail: React.FC = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          <div className="flex gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="flex gap-2 min-w-0">
             <input
               value={newPlus}
               onChange={e => setNewPlus(e.target.value)}
               aria-label="Point positif"
               placeholder="Un point positif..."
-              className="flex-1 px-3 py-2 text-sm border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-white"
+              className="min-w-0 flex-1 px-3 py-2 text-sm border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-white"
               onKeyDown={e => e.key === 'Enter' && handleAddPlus()}
             />
-            <button onClick={handleAddPlus} className="bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600">+</button>
+            <button onClick={handleAddPlus} className="shrink-0 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600">+</button>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 min-w-0">
             <input
               value={newMoins}
               onChange={e => setNewMoins(e.target.value)}
               aria-label="Point négatif"
               placeholder="Un point négatif..."
-              className="flex-1 px-3 py-2 text-sm border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 bg-white"
+              className="min-w-0 flex-1 px-3 py-2 text-sm border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 bg-white"
               onKeyDown={e => e.key === 'Enter' && handleAddMoins()}
             />
-            <button onClick={handleAddMoins} className="bg-red-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-red-600">−</button>
+            <button onClick={handleAddMoins} className="shrink-0 bg-red-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-red-600">−</button>
           </div>
         </div>
       </div>
